@@ -1,3 +1,4 @@
+root = defined?(Rails) ? Rails.root : Dir.pwd
 STATS_DIRECTORIES = [
   %w(Controllers        app/controllers),
   %w(Helpers            app/helpers),
@@ -13,10 +14,10 @@ STATS_DIRECTORIES = [
   %w(Integration\ tests test/integration),
   %w(Functional\ tests\ (old)  test/functional),
   %w(Unit\ tests \ (old)       test/unit)
-].collect { |name, dir| [ name, "#{Rails.root}/#{dir}" ] }.select { |name, dir| File.directory?(dir) }
+].collect { |name, dir| [ name, "#{root}/#{dir}" ] }.select { |name, dir| File.directory?(dir) }
 
 desc "Report code statistics (KLOCs, etc) from the application"
 task :stats do
-  require 'rails/code_statistics'
-  CodeStatistics.new(*STATS_DIRECTORIES).to_s
+  require 'code_statistics/code_statistics'
+  CodeStatistics::CodeStatistics.new(*STATS_DIRECTORIES).to_s
 end
