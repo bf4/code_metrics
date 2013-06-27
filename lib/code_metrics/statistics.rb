@@ -1,7 +1,7 @@
-require 'code_statistics/code_statistics_calculator'
+require 'code_metrics/statistics_calculator'
 
-module CodeStatistics #:nodoc:
-  class CodeStatistics
+module CodeMetrics #:nodoc:
+  class Statistics
 
     TEST_TYPES = ['Controller tests',
                   'Helper tests',
@@ -36,7 +36,7 @@ module CodeStatistics #:nodoc:
       end
 
       def calculate_directory_statistics(directory, pattern = /.*\.(rb|js|coffee)$/)
-        stats = CodeStatisticsCalculator.new
+        stats = StatisticsCalculator.new
 
         Dir.foreach(directory) do |file_name|
           path = "#{directory}/#{file_name}"
@@ -54,7 +54,7 @@ module CodeStatistics #:nodoc:
       end
 
       def calculate_total
-        @statistics.each_with_object(CodeStatisticsCalculator.new) do |pair, total|
+        @statistics.each_with_object(StatisticsCalculator.new) do |pair, total|
           total.add(pair.last)
         end
       end

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    code_statistics (0.0.1)
+    code_metrics (0.0.1)
       rails (~> 4.0.0)
 
 GEM
@@ -84,5 +84,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  code_statistics!
+  code_metrics!
   sqlite3

@@ -8,7 +8,7 @@ require 'rdoc/task'
 
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'CodeStatistics'
+  rdoc.title    = 'CodeMetrics'
   rdoc.options << '--line-numbers'
   rdoc.rdoc_files.include('README.rdoc')
   rdoc.rdoc_files.include('lib/**/*.rb')
@@ -20,7 +20,7 @@ end
 Bundler::GemHelper.install_tasks
 
 require 'rake/testtask'
-require 'code_statistics'
+load File.expand_path('../lib/tasks/statistics.rake', __FILE__)
 
 Rake::TestTask.new(:test) do |t|
   t.libs << 'lib'

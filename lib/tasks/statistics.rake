@@ -18,6 +18,6 @@ STATS_DIRECTORIES = [
 
 desc "Report code statistics (KLOCs, etc) from the application"
 task :stats do
-  require 'code_statistics/code_statistics'
-  CodeStatistics::CodeStatistics.new(*STATS_DIRECTORIES).to_s
+  require 'code_metrics/statistics'
+  CodeMetrics::Statistics.new(*STATS_DIRECTORIES).to_s
 end

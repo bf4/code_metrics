@@ -1,8 +1,8 @@
-require 'code_statistics'
+require 'code_metrics'
 require 'rails'
-module CodeStatistics
+module CodeMetrics
   class Railtie < Rails::Railtie
-    railtie_name :code_statistics
+    railtie_name :code_metrics
 
     rake_tasks do
       load "tasks/statistics.rake"

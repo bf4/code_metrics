@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "code_statistics/version"
+require "code_metrics/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "code_statistics"
-  s.version     = CodeStatistics::VERSION
+  s.name        = "code_metrics"
+  s.version     = CodeMetrics::VERSION
   s.authors     = ["Benjamin Fleischer"]
   s.email       = ["dev@benjaminfleischer.com"]
   s.homepage    = "https://github.com/bf4/code_statistics"

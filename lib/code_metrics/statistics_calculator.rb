@@ -1,5 +1,5 @@
-module CodeStatistics
-  class CodeStatisticsCalculator #:nodoc:
+module CodeMetrics
+  class StatisticsCalculator #:nodoc:
     attr_reader :lines, :code_lines, :classes, :methods
 
     PATTERNS = {
@@ -32,11 +32,11 @@ module CodeStatistics
       @methods = methods
     end
 
-    def add(code_statistics_calculator)
-      @lines += code_statistics_calculator.lines
-      @code_lines += code_statistics_calculator.code_lines
-      @classes += code_statistics_calculator.classes
-      @methods += code_statistics_calculator.methods
+    def add(code_metrics_calculator)
+      @lines += code_metrics_calculator.lines
+      @code_lines += code_metrics_calculator.code_lines
+      @classes += code_metrics_calculator.classes
+      @methods += code_metrics_calculator.methods
     end
 
     def add_by_file_path(file_path)
