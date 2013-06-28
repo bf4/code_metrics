@@ -2,7 +2,9 @@ module CodeMetrics
 
   class Profiler
 
-    def initialize
+    attr_reader :path, :mode
+    def initialize(path, mode=nil)
+      @path, @mode = path, mode
       begin
         Gem.source_index
       rescue NoMethodError
@@ -15,8 +17,7 @@ module CodeMetrics
       GC.start
       before_rss = `ps -o rss= -p #{Process.pid}`.to_i
 
-      path = ARGV.shift
-      if mode = ARGV.shift
+      if mode
         require 'ruby-prof'
         RubyProf.measure_mode = RubyProf.const_get(mode.upcase)
         RubyProf.start
@@ -78,4 +79,9 @@ module CodeMetrics
       end
     end
   end
+end
+if $0 == __FILE__
+  path = File.expand_path(ARGV.shift)
+  mode = ARGV.shift
+  CodeMetrics::Profiler.new(path, mode).profile_requires
 end

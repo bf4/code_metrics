@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
 # Example:
-#   code_metrics-profile activesupport/lib/active_support.rb
+#   code_metrics-profile activesupport/lib/active_support.rb [ruby-prof mode]
 
 require 'code_metrics'
 require 'code_metrics/profiler'
-CodeMetrics::Profiler.new.profile_requires
+path = File.expand_path(ARGV.shift)
+mode = ARGV.shift
+CodeMetrics::Profiler.new(path, mode).profile_requires
