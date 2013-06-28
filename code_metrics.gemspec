@@ -19,6 +19,9 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
+  s.executables   =  Dir['bin/*'].map{ |f| File.basename(f) }
+  s.default_executable = "code_metrics"
+
 
   s.add_development_dependency "rails", ["> 3.0", "< 5.0"]
 
