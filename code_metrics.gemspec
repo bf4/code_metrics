@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version     = CodeMetrics::VERSION
   s.author      = "David Heinemeier Hansson"
   s.email       = "david@loudthinking.com"
-  s.homepage    = "https://github.com/bf4/code_statistics"
+  s.homepage    = "https://github.com/bf4/code_metrics"
   s.summary     = "Extraction of the rails rake stats task as a gem and rails plugin"
   s.description = "rake stats is great for looking at statistics on your code, displaying things like KLOCs (thousands of lines of code) and your code to test ratio."
 
@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = '>= 1.8.11'
 
   s.license = 'MIT'
+  s.require_paths = ["lib"]
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
