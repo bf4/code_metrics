@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# Example:
+#   code_metrics-profile activesupport/lib/active_support.rb
+
+require 'code_metrics'
+require 'code_metrics/profiler'
+CodeMetrics::Profiler.new.profile_requires
