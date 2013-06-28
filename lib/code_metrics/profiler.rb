@@ -3,7 +3,11 @@ module CodeMetrics
   class Profiler
 
     def initialize
-      Gem.source_index
+      begin
+        Gem.source_index
+      rescue NoMethodError
+        Gem::Specification.all
+      end
       require 'benchmark'
     end
 
