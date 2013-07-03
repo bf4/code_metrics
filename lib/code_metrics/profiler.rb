@@ -1,9 +1,11 @@
 module CodeMetrics
 
   class Profiler
+    Error = Class.new(StandardError)
 
     attr_reader :path, :mode
     def initialize(path, mode=nil)
+      assert_ruby_file_exists(path)
       @path, @mode = path, mode
       Gem.refresh
       # H/T https://github.com/pry/pry/blob/b02d0a4863/lib/pry/plugins.rb#L72
@@ -51,6 +53,15 @@ module CodeMetrics
         end
       end
       puts "%8.1f ms  %d KB RSS" % [elapsed * 1000, after_rss - before_rss]
+    end
+
+    private
+
+    def assert_ruby_file_exists(path)
+      raise Error.new("No such file") unless File.exists?(path)
+      ruby_extension = path[/\.rb\Z/]
+      ruby_executable = File.open(path, 'rb').readline[/\A#!.*ruby/]
+      raise Error.new("Not a ruby file") unless ruby_extension or ruby_executable
     end
 
   end
