@@ -1,4 +1,5 @@
 require 'code_metrics/statistics_calculator'
+require 'code_metrics/stats_directories'
 
 module CodeMetrics #:nodoc:
   class Statistics
