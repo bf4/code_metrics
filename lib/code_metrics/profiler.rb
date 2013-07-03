@@ -5,11 +5,9 @@ module CodeMetrics
     attr_reader :path, :mode
     def initialize(path, mode=nil)
       @path, @mode = path, mode
-      begin
-        Gem.source_index
-      rescue NoMethodError
-        Gem::Specification.all
-      end
+      Gem.refresh
+      # H/T https://github.com/pry/pry/blob/b02d0a4863/lib/pry/plugins.rb#L72
+      Gem::Specification.respond_to?(:each) ? Gem::Specification.all : Gem.source_index
       require 'benchmark'
     end
 
