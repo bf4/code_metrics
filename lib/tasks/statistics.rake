@@ -10,5 +10,5 @@ begin
     end
   end
 rescue LoadError
-  STDERR.puts "Cannot load rake stats task, rake not available"
+  STDERR.puts "Cannot load rake code_metrics:stats task, rake not available"
 end
