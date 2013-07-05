@@ -1,7 +1,7 @@
 require 'code_metrics/statistics_calculator'
 require 'code_metrics/stats_directories'
 
-module CodeMetrics #:nodoc:
+module CodeMetrics
   class Statistics
 
     TEST_TYPES = ['Controller tests',
