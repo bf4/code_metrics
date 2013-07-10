@@ -1,23 +1,26 @@
 GIT
   remote: git://github.com/bf4/rails.git
-  revision: 4f36f8d7af5d78caf22cc9bcab28ec825cd86d10
+  revision: 7c9bd8ceab1337deccf62b05b5942fb44dfe7e12
   branch: replace-codes_tatistics-with-gem
   specs:
     actionmailer (4.1.0.beta)
       actionpack (= 4.1.0.beta)
       mail (~> 2.5.4)
     actionpack (4.1.0.beta)
+      actionview (= 4.1.0.beta)
+      activesupport (= 4.1.0.beta)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    actionview (4.1.0.beta)
+      activemodel (= 4.1.0.beta)
       activesupport (= 4.1.0.beta)
       builder (~> 3.1.0)
       erubis (~> 2.7.0)
-      rack (~> 1.5.2)
-      rack-test (~> 0.6.2)
     activemodel (4.1.0.beta)
       activesupport (= 4.1.0.beta)
       builder (~> 3.1.0)
     activerecord (4.1.0.beta)
       activemodel (= 4.1.0.beta)
-      activerecord-deprecated_finders (~> 1.0.2)
       activesupport (= 4.1.0.beta)
       arel (~> 4.0.0)
     activesupport (4.1.0.beta)
@@ -29,11 +32,13 @@ GIT
     rails (4.1.0.beta)
       actionmailer (= 4.1.0.beta)
       actionpack (= 4.1.0.beta)
+      actionview (= 4.1.0.beta)
       activerecord (= 4.1.0.beta)
       activesupport (= 4.1.0.beta)
       bundler (>= 1.3.0, < 2.0)
+      code_metrics
       railties (= 4.1.0.beta)
-      sprockets-rails (~> 2.0.0.rc4)
+      sprockets-rails (~> 2.0.0)
     railties (4.1.0.beta)
       actionpack (= 4.1.0.beta)
       activesupport (= 4.1.0.beta)
@@ -48,7 +53,6 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activerecord-deprecated_finders (1.0.3)
     arel (4.0.0)
     atomic (1.1.10)
     builder (3.1.4)
