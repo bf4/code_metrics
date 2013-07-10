@@ -24,6 +24,4 @@ Gem::Specification.new do |s|
   s.default_executable = "code_metrics"
 
   s.add_development_dependency "rails", ["> 3.0", "< 5.0"]
-
-  s.add_development_dependency "sqlite3"
 end
