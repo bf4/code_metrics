@@ -1,22 +1,5 @@
 #!/usr/bin/env ruby
 require 'code_metrics'
 require 'code_metrics/statistics'
-# TODO, remove this duplicate code
-root = defined?(Rails) ? Rails.root : Dir.pwd
-STATS_DIRECTORIES = [
-  %w(Controllers        app/controllers),
-  %w(Helpers            app/helpers),
-  %w(Models             app/models),
-  %w(Mailers            app/mailers),
-  %w(Javascripts        app/assets/javascripts),
-  %w(Libraries          lib/),
-  %w(APIs               app/apis),
-  %w(Controller\ tests  test/controllers),
-  %w(Helper\ tests      test/helpers),
-  %w(Model\ tests       test/models),
-  %w(Mailer\ tests      test/mailers),
-  %w(Integration\ tests test/integration),
-  %w(Functional\ tests\ (old)  test/functional),
-  %w(Unit\ tests \ (old)       test/unit)
-].collect { |name, dir| [ name, "#{root}/#{dir}" ] }.select { |name, dir| File.directory?(dir) }
+STATS_DIRECTORIES = CodeMetrics::StatsDirectories.new.directories
 CodeMetrics::Statistics.new(*STATS_DIRECTORIES).to_s
