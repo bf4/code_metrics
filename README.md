@@ -81,7 +81,7 @@ We encourage you to contribute to Ruby on Rails! Please check out the
 
 ## Code Status
 
-* [![Build Status](https://api.travis-ci.org/bf4/code_metrics.png)](https://travis-ci.org/bf4/code_metrics)
+* [![Build Status](https://travis-ci.org/bf4/code_metrics.png?branch=master)](https://travis-ci.org/bf4/code_metrics)
 * [![Dependencies](https://gemnasium.com/bf4/code_metrics.png?travis)](https://gemnasium.com/bf4/code_metrics)
 
 ## License
