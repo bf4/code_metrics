@@ -1,4 +1,3 @@
-require 'code_metrics'
 require 'rails'
 module CodeMetrics
   class Railtie < Rails::Railtie
