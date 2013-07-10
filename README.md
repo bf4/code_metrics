@@ -41,8 +41,12 @@ CodeStatistics extracted from Rails
 
     # in Rails
     require 'rails/code_statistics'
-    ::STATS_DIRECTORIES << ['Acceptance specs', 'spec/acceptance']
-    ::CodeStatistics::TEST_TYPES << 'Acceptance specs'
+    {
+      'Acceptance' => 'spec/acceptance',
+    }.each do |type, dir|
+      ::STATS_DIRECTORIES << ["#{name} specs", dir]
+      ::CodeStatistics::TEST_TYPES << "#{name} specs"
+    end
     CodeStatistics.new(*STATS_DIRECTORIES).to_s
     ```
 
