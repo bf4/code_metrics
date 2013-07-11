@@ -6,7 +6,9 @@ CodeStatistics extracted from Rails
 
 1. Install at the command prompt if you haven't yet:
 
+    ```bash
     gem install code_metrics
+    ```
 
 ### Usage
 
