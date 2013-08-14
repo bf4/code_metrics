@@ -36,12 +36,15 @@ CodeStatistics extracted from Rails
 
     ```ruby
     require 'code_metrics/code_statistics'
-    dirs = CodeMetrics::StatsDirectories.new.directories
-    dirs  << ['Acceptance specs', 'spec/acceptance']
-    CodeMetrics::Statistics::TEST_TYPES << 'Acceptance specs'
+    dirs = CodeMetrics::StatsDirectories.new
+    dirs.add_test_directories('spec/**/*_spec.rb', 'spec') # where the 2nd argument is a required string in the filename
+    dirs.add_directories('engines/**/*.rb') # no restrictions on the file name, 2nd argument omitted
+    dirs.add_test_directory('Acceptance specs', 'spec/acceptance')
+    dirs.directories # outputs an array of [description, folder_path] to run statistics against
     CodeMetrics::Statistics.new(*dirs).to_s
 
     # in Rails
+
     require 'rails/code_statistics'
     {
       'Acceptance' => 'spec/acceptance',
