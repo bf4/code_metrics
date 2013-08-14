@@ -4,13 +4,7 @@ require 'code_metrics/stats_directories'
 module CodeMetrics
   class Statistics
 
-    TEST_TYPES = ['Controller tests',
-                  'Helper tests',
-                  'Model tests',
-                  'Mailer tests',
-                  'Integration tests',
-                  'Functional tests (old)',
-                  'Unit tests (old)']
+    TEST_TYPES = []
 
     def initialize(*pairs)
       @pairs      = pairs
