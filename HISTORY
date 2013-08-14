@@ -7,6 +7,12 @@ As such, a _Feature_ would map to either major or minor. A _bug fix_ to a patch.
 ### Master
 
 * Features
+* Fixes
+* Misc
+
+### 0.1.0   - 2013-08-14
+
+* Features
   * Easily configure additional directories to run on (Benjamin Fleischer, #5)
 * Fixes
 * Misc

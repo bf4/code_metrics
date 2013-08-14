@@ -48,7 +48,7 @@ GIT
 PATH
   remote: .
   specs:
-    code_metrics (0.0.3)
+    code_metrics (0.1.0)
 
 GEM
   remote: https://rubygems.org/
