@@ -1,0 +1,6 @@
+--no-private
+--quiet
+--readme README.md
+lib/code_metrics.rb
+lib/tasks/*.rake
+lib/code_metrics/**/*.rb
