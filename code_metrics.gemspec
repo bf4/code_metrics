@@ -12,15 +12,15 @@ Gem::Specification.new do |s|
   s.summary     = "Extraction of the rails rake stats task as a gem and rails plugin"
   s.description = "rake stats is great for looking at statistics on your code, displaying things like KLOCs (thousands of lines of code) and your code to test ratio."
 
-  s.required_ruby_version     = '>= 1.9.3'
-  s.required_rubygems_version = '>= 1.8.11'
+  s.required_ruby_version     = '>= 1.9.0'
+  s.required_rubygems_version = '>= 1.3.7'
 
-  s.license = 'MIT'
-  s.require_paths = ["lib"]
+  s.license            = 'MIT'
+  s.require_paths      = ["lib"]
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
-  s.executables   =  Dir['bin/*'].map{ |f| File.basename(f) }
+  s.files              = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.test_files         = Dir["test/**/*"]
+  s.executables        = Dir['bin/*'].map{ |f| File.basename(f) }
   s.default_executable = "code_metrics"
 
   s.add_development_dependency "rails", ["> 3.0", "< 5.0"]
