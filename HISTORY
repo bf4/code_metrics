@@ -10,6 +10,15 @@ As such, a _Feature_ would map to either major or minor. A _bug fix_ to a patch.
 * Fixes
 * Misc
 
+### 0.1.1   - 2013-09-26
+
+* Features
+* Fixes
+  * Handle file encoding (Benajmin Fleischer, #6, #8)
+* Misc
+  * Lower ruby dependency to >= 1.9.0 (Benjamin Fleischer, #7)
+  * Request to have this library adopted by Rails [denied](https://github.com/rails/rails/pull/11148).
+
 ### 0.1.0   - 2013-08-14
 
 * Features
