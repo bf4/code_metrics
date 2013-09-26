@@ -40,7 +40,9 @@ module CodeMetrics
     end
 
     def add_by_file_path(file_path)
-      File.open(file_path) do |f|
+      file_flags = 'r:UTF-8'
+      file_flags << ':UTF-8' unless defined?(Encoding) && Encoding.default_internal == Encoding::UTF_8
+      File.open(file_path, file_flags) do |f|
         self.add_by_io(f, file_type(file_path))
       end
     end
@@ -51,6 +53,7 @@ module CodeMetrics
       comment_started = false
 
       while line = io.gets
+        line.encode!('UTF-8', 'UTF-8', :invalid => :replace) if line.respond_to?(:encode!)
         @lines += 1
 
         if comment_started
