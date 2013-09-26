@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = "code_metrics"
   s.version     = CodeMetrics::VERSION
-  s.author      = "David Heinemeier Hansson"
-  s.email       = "david@loudthinking.com"
+  s.authors      = ["David Heinemeier Hansson", "Benjamin Fleischer"]
+  s.email        = ["david@loudthinking.com", "github@benjaminfleischer.com"]
   s.homepage    = "https://github.com/bf4/code_metrics"
   s.summary     = "Extraction of the rails rake stats task as a gem and rails plugin"
   s.description = "rake stats is great for looking at statistics on your code, displaying things like KLOCs (thousands of lines of code) and your code to test ratio."

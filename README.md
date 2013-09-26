@@ -1,6 +1,6 @@
-## [CodeMetrics](https://github.com/rails/rails/pull/11148)
+## CodeMetrics
 
-CodeStatistics extracted from Rails
+Independent library [extracted from Rails code statistics](https://github.com/rails/rails/pull/11148).
 
 ## Getting Started
 
@@ -85,8 +85,8 @@ CodeStatistics extracted from Rails
 
 ## Contributing
 
-We encourage you to contribute to Ruby on Rails! Please check out the
-[Contributing to Ruby on Rails guide](http://edgeguides.rubyonrails.org/contributing_to_ruby_on_rails.html) for guidelines about how to proceed. [Join us!](http://contributors.rubyonrails.org)
+  * [Code](https://github.com/bf4/code_metrics/pulls)
+  * [Issues, Bug Reports, Suggestions](https://github.com/bf4/code_metrics/issues)
 
 ## Code Status
 
@@ -95,4 +95,4 @@ We encourage you to contribute to Ruby on Rails! Please check out the
 
 ## License
 
-Ruby on Rails is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+Released under the [MIT License](http://www.opensource.org/licenses/MIT).
