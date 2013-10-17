@@ -41,7 +41,7 @@ module CodeMetrics
 
     def add_by_file_path(file_path)
       file_flags = 'r:UTF-8'
-      file_flags << ':UTF-8' unless defined?(Encoding) && Encoding.default_internal == Encoding::UTF_8
+      file_flags << ':UTF-8' unless defined?(Encoding) && Encoding.default_external == Encoding::UTF_8
       File.open(file_path, file_flags) do |f|
         self.add_by_io(f, file_type(file_path))
       end
