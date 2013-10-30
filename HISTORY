@@ -10,6 +10,13 @@ As such, a _Feature_ would map to either major or minor. A _bug fix_ to a patch.
 * Fixes
 * Misc
 
+### 0.1.2   - 2013-10-30
+
+* Features
+* Fixes
+  * Binary read files to avoid encoding issues, which aren't pertinent to line count
+* Misc
+
 ### 0.1.1   - 2013-09-26
 
 * Features
