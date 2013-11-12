@@ -96,3 +96,7 @@ Independent library [extracted from Rails code statistics](https://github.com/ra
 ## License
 
 Released under the [MIT License](http://www.opensource.org/licenses/MIT).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bf4/code_metrics/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
