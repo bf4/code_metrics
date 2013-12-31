@@ -52,7 +52,6 @@ module CodeMetrics
       comment_started = false
 
       while line = io.gets
-        line.encode!('UTF-8', 'UTF-8', :invalid => :replace) if line.respond_to?(:encode!)
         @lines += 1
 
         if comment_started

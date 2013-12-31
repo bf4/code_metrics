@@ -4,11 +4,17 @@ Each change should fall into categories that would affect whether the release is
 
 As such, a _Feature_ would map to either major or minor. A _bug fix_ to a patch.  And _misc_ is either minor or patch, the difference being kind of fuzzy for the purposes of history.  Adding tests would be patch level.
 
-### Master
+### [Master](https://github.com/bf4/code_metrics/compare/v0.1.3...master)
 
+* Breaking Changes
 * Features
 * Fixes
 * Misc
+
+### [0.1.3   - 2013-12-31](https://github.com/bf4/code_metrics/compare/v0.1.2...v0.1.3)
+
+* Fixes
+  * No longer forces BINARY-encoded IO to UTF-8. Fixes crashes on invalid byte sequences. (a5488634e0f1)
 
 ### 0.1.2   - 2013-10-30
 
