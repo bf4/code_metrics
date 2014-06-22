@@ -1,4 +1,4 @@
-## CodeMetrics [![Inline docs](http://inch-pages.github.io/github/bf4/code_metrics.png)](http://inch-pages.github.io/github/bf4/code_metrics)
+## CodeMetrics [![Inline docs](http://inch-ci.org/github/bf4/code_metrics.png)](http://inch-ci.org/github/bf4/code_metrics)
 
 Independent library [extracted from Rails code statistics](https://github.com/rails/rails/pull/11148).
 
