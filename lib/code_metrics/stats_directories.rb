@@ -28,7 +28,9 @@ module CodeMetrics
       @root = path_prefix
       @app_directories = default_app_directories
       @test_directories = default_test_directories
-      @test_directories.each { |pair| CodeMetrics::Statistics::TEST_TYPES << pair.first }
+      @test_directories.each do |pair|
+        CodeMetrics::Statistics::TEST_TYPES << pair.first
+      end
     end
 
     def directories
