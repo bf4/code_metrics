@@ -6,7 +6,7 @@ module CodeMetrics
   class RakeTest < ActiveSupport::TestCase
 
     def test_code_metrics_sanity
-      assert_match "Code LOC: 5     Test LOC: 0     Code to Test Ratio: 1:0.0",
+      assert_match "Code LOC: 5     Test LOC: 8     Code to Test Ratio: 1:1.6",
         Dir.chdir(app_path){ `rake code_metrics:stats` }
     end
 
